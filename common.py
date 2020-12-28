@@ -36,9 +36,7 @@ class TimeoutException(Exception): pass
 def time_limit(seconds):
     def signal_handler(signum, frame):
         raise TimeoutException(colorize(Color.RED, "   *** Timed out!", highlight=True))
-    signal.signal(signal.SIGALRM, signal_handler)
-    signal.alarm(seconds)
-    try:
-        yield
-    finally:
-        signal.alarm(0)
+    #signal.signal(signal.SIGALRM, signal_handler)
+    #signal.alarm(seconds)
+    yield
+    
