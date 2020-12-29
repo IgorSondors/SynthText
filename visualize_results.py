@@ -26,7 +26,7 @@ def viz_textbb(text_im, charBB_list, wordBB, alpha=1.0):
     plt.imshow(text_im)
     H,W = text_im.shape[:2]
 
-    # plot the character-BB:
+    """# plot the character-BB:
     for i in range(len(charBB_list)):
         bbs = charBB_list[i]
         ni = bbs.shape[-1]
@@ -43,7 +43,7 @@ def viz_textbb(text_im, charBB_list, wordBB, alpha=1.0):
         # visualize the indiv vertices:
         vcol = ['r','g','b','k']
         for j in range(4):
-            plt.scatter(bb[0,j],bb[1,j],color=vcol[j])        
+            plt.scatter(bb[0,j],bb[1,j],color=vcol[j])"""        
 
     plt.gca().set_xlim([0,W-1])
     plt.gca().set_ylim([H-1,0])
@@ -71,4 +71,3 @@ def main(db_fname):
 
 if __name__=='__main__':
     main('results/SynthText.h5')
-
