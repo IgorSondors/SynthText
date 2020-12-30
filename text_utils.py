@@ -434,7 +434,7 @@ class FontState(object):
             self.font_model = p
             
         # get the names of fonts to use:
-        self.FONT_LIST = osp.join(data_dir, 'fonts/fontlist.txt')
+        self.FONT_LIST = osp.join(data_dir, 'fonts/fontlist_new.txt')
         self.fonts = [os.path.join(data_dir,'fonts',f.strip()) for f in open(self.FONT_LIST)]
 
 
