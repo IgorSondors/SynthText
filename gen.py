@@ -72,7 +72,7 @@ def add_res_to_db(imgname,res,db):
     db['data'][dname].attrs['wordBB'] = res[i]['wordBB']        
     #db['data'][dname].attrs['txt'] = res[i]['txt']
     L = res[i]['txt']
-    L = [n.encode("ascii", "ignore") for n in L]
+    L = [n.encode("UTF-8", "ignore") for n in L]
     db['data'][dname].attrs['txt'] = L
 
 
